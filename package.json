@@ -1,0 +1,39 @@
+{
+  "name": "create-nodejs-ts",
+  "version": "3.0.2",
+  "description": "NodeJS Starter Project Kit",
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "private": false,
+  "bin": {
+    "create-nodejs-ts": "cmd/create-nodejs-ts/index.js"
+  },
+  "scripts": {
+    "start": "node dist/main.js",
+    "start:dev": "nodemon --ext js,ts,json,env --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/main.ts",
+    "build": "tsc --project tsconfig.build.json",
+    "build:clean": "rm -rf tsconfig.build.tsbuildinfo && rm -rf ./dist"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.0",
+    "graphql": "^16.6.0",
+    "tslib": "^2.3.1",
+    "uuidv4": "^6.2.13",
+    "weaviate-ts-client": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.0.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
